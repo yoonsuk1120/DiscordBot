@@ -29,7 +29,6 @@ music_skip = True
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game("Music")) # 봇 상태 표시줄
-    #await client.login('OTYzNzQ1MzM1MTExNDU0NzUw.YlajyQ.K8c8AWzIrEjjcYGd1sJJR_ZCDfE')
     print('We have logged in as {0.user}'.format(client)) #로그인 되면 터미널에 출력
 
 @client.event
