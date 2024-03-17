@@ -13,8 +13,8 @@ import requests
 import time
 # pynacl
 
-# 유튜브의 동적 웹페이지 기능 때문에 bs4로는 한계가 있다.
-# 동적 웹페이지 처리를 위해 selenium 사용
+# URL escape code 때문에 bs4로는 한계가 있다.
+# selenium 사용
 #https://www.youtube.com/results?search_query=%EC%97%90%EC%8A%A4%ED%8C%8C
 #https://www.youtube.com/results?search_query=에스파
 from selenium import webdriver
@@ -65,7 +65,7 @@ async def on_message(message):
 # 가수 이름이나 노래 제목을 입력하면 유튜브 제일 상단 영상 출력
 async def __search(message):
     # 유튜브뮤직에서 노래 가져오기
-    # 동적페이지는 bs4로 작업이 불가능해서 selenium 사용
+    # bs4로 작업이 불가능해서 selenium 사용
     options = webdriver.ChromeOptions()
     options.add_argument("headless")
     options.add_argument('--window-size= 1600,900')
